@@ -12,6 +12,8 @@ target 'LogInSignUpProc' do
   pod 'FBSDKShareKit'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
+  pod 'KakaoOpenSDK/KakaoOpenSDK'
+  pod 'SDWebImage'
   # Pods for LogInSignUpProc
 
 end
