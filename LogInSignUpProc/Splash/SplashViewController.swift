@@ -14,7 +14,7 @@ class SplashViewController: UIViewController {
     @IBOutlet weak var fooplsLoadingView: FOOPLSView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //애니메이션 끝나고 넘어가는 방법 찾기
         self.fooplsLoadingView.addLoadingAnimation()
         
         
