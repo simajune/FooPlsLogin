@@ -11,6 +11,12 @@
 		2328AB8C1FCE9FFC004B75C0 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2328AB8B1FCE9FFC004B75C0 /* SplashViewController.swift */; };
 		2328AB8E1FCEA0EA004B75C0 /* FOOPLSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2328AB8D1FCEA0EA004B75C0 /* FOOPLSView.swift */; };
 		2328AB901FCEAC6A004B75C0 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2328AB8F1FCEAC69004B75C0 /* KakaoOpenSDK.framework */; };
+		23E95EB11FCEE1FE00BE7843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23E95EA91FCEE1F900BE7843 /* Assets.xcassets */; };
+		23E95EB21FCEE1FE00BE7843 /* FOOPLSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E95EAA1FCEE1F900BE7843 /* FOOPLSView.swift */; };
+		23E95EB31FCEE1FE00BE7843 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23E95EAB1FCEE1F900BE7843 /* GoogleService-Info.plist */; };
+		23E95EB41FCEE1FE00BE7843 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23E95EAC1FCEE1F900BE7843 /* LaunchScreen.storyboard */; };
+		23E95EB51FCEE1FE00BE7843 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E95EAE1FCEE1F900BE7843 /* AppDelegate.swift */; };
+		23E95EB61FCEE1FE00BE7843 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23E95EB01FCEE1F900BE7843 /* Info.plist */; };
 		78393410F846160C7EC6FD47 /* Pods_LogInSignUpProc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 829B4403FD344F685DF572E2 /* Pods_LogInSignUpProc.framework */; };
 		CE0A7F041FCE8EDA009C884F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A7F031FCE8EDA009C884F /* AppDelegate.swift */; };
 		CE0A7F061FCE8EDA009C884F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0A7F051FCE8EDA009C884F /* SignUpViewController.swift */; };
@@ -29,6 +35,13 @@
 		2328AB8B1FCE9FFC004B75C0 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		2328AB8D1FCEA0EA004B75C0 /* FOOPLSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FOOPLSView.swift; sourceTree = "<group>"; };
 		2328AB8F1FCEAC69004B75C0 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoOpenSDK.framework; path = Pods/KakaoOpenSDK/KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		23E95EA91FCEE1F900BE7843 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23E95EAA1FCEE1F900BE7843 /* FOOPLSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FOOPLSView.swift; sourceTree = "<group>"; };
+		23E95EAB1FCEE1F900BE7843 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		23E95EAD1FCEE1F900BE7843 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		23E95EAE1FCEE1F900BE7843 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		23E95EAF1FCEE1F900BE7843 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		23E95EB01FCEE1F900BE7843 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		829B4403FD344F685DF572E2 /* Pods_LogInSignUpProc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogInSignUpProc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85FD80398EEA170A72A1748F /* Pods-LogInSignUpProc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogInSignUpProc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogInSignUpProc/Pods-LogInSignUpProc.debug.xcconfig"; sourceTree = "<group>"; };
 		CE0A7F001FCE8EDA009C884F /* LogInSignUpProc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogInSignUpProc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,7 +50,6 @@
 		CE0A7F081FCE8EDA009C884F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		CE0A7F0A1FCE8EDA009C884F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE0A7F0D1FCE8EDA009C884F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CE0A7F0F1FCE8EDA009C884F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0A7F151FCE90EA009C884F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE9D36F21FCE92ED00E3713D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CEF02A241FCED34700C89DF6 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -65,6 +77,32 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		23E95EA31FCEE1B100BE7843 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				CE0A7F031FCE8EDA009C884F /* AppDelegate.swift */,
+				2328AB8D1FCEA0EA004B75C0 /* FOOPLSView.swift */,
+				CE0A7F0C1FCE8EDA009C884F /* LaunchScreen.storyboard */,
+				CE0A7F151FCE90EA009C884F /* GoogleService-Info.plist */,
+				CE0A7F0A1FCE8EDA009C884F /* Assets.xcassets */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		23E95EA81FCEE1F900BE7843 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				23E95EA91FCEE1F900BE7843 /* Assets.xcassets */,
+				23E95EAA1FCEE1F900BE7843 /* FOOPLSView.swift */,
+				23E95EAB1FCEE1F900BE7843 /* GoogleService-Info.plist */,
+				23E95EAC1FCEE1F900BE7843 /* LaunchScreen.storyboard */,
+				23E95EAE1FCEE1F900BE7843 /* AppDelegate.swift */,
+				23E95EAF1FCEE1F900BE7843 /* Bridging-Header.h */,
+				23E95EB01FCEE1F900BE7843 /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		3C840C1FBDBC294980830D5A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +128,7 @@
 				CE0A7F011FCE8EDA009C884F /* Products */,
 				3C840C1FBDBC294980830D5A /* Pods */,
 				96A13FB02113034E7BE8EA69 /* Frameworks */,
+				23E95EA31FCEE1B100BE7843 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,13 +144,10 @@
 			isa = PBXGroup;
 			children = (
 				CEF02A231FCED2A300C89DF6 /* Extension */,
+				23E95EA81FCEE1F900BE7843 /* Resource */,
 				CE9D36F11FCE92CA00E3713D /* Storyboard */,
-
 				2328AB8A1FCE9FBB004B75C0 /* Splash */,
-				CE0A7F181FCE91BD009C884F /* Signup */,
-				CE0A7F171FCE91B6009C884F /* Login */,
 				CE0A7F181FCE91BD009C884F /* LoginSignup */,
-
 			);
 			path = LogInSignUpProc;
 			sourceTree = "<group>";
@@ -148,19 +184,6 @@
 				CE9D36F21FCE92ED00E3713D /* LoginViewController.swift */,
 			);
 			path = VC;
-			sourceTree = "<group>";
-		};
-		CE0A7F221FCE9251009C884F /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				2328AB8D1FCEA0EA004B75C0 /* FOOPLSView.swift */,
-				CE0A7F031FCE8EDA009C884F /* AppDelegate.swift */,
-				CE0A7F0A1FCE8EDA009C884F /* Assets.xcassets */,
-				CE0A7F0C1FCE8EDA009C884F /* LaunchScreen.storyboard */,
-				CE0A7F151FCE90EA009C884F /* GoogleService-Info.plist */,
-				CE0A7F0F1FCE8EDA009C884F /* Info.plist */,
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		CE9D36F11FCE92CA00E3713D /* Storyboard */ = {
@@ -243,10 +266,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0A7F0E1FCE8EDA009C884F /* LaunchScreen.storyboard in Resources */,
+				23E95EB41FCEE1FE00BE7843 /* LaunchScreen.storyboard in Resources */,
+				23E95EB61FCEE1FE00BE7843 /* Info.plist in Resources */,
 				CE0A7F161FCE90EB009C884F /* GoogleService-Info.plist in Resources */,
 				CE0A7F0B1FCE8EDA009C884F /* Assets.xcassets in Resources */,
 				2328AB891FCE9FB5004B75C0 /* Splash.storyboard in Resources */,
+				23E95EB11FCEE1FE00BE7843 /* Assets.xcassets in Resources */,
 				CE0A7F091FCE8EDA009C884F /* Login.storyboard in Resources */,
+				23E95EB31FCEE1FE00BE7843 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,19 +357,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF02A271FCED3D600C89DF6 /* LoginAndSignUpView.swift in Sources */,
+				23E95EB21FCEE1FE00BE7843 /* FOOPLSView.swift in Sources */,
 				CE9D36F31FCE92ED00E3713D /* LoginViewController.swift in Sources */,
+				23E95EB51FCEE1FE00BE7843 /* AppDelegate.swift in Sources */,
 				CE0A7F061FCE8EDA009C884F /* SignUpViewController.swift in Sources */,
 				CE0A7F041FCE8EDA009C884F /* AppDelegate.swift in Sources */,
 				2328AB8E1FCEA0EA004B75C0 /* FOOPLSView.swift in Sources */,
 				2328AB8C1FCE9FFC004B75C0 /* SplashViewController.swift in Sources */,
 				CEF02A251FCED34700C89DF6 /* Extension.swift in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		23E95EAC1FCEE1F900BE7843 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23E95EAD1FCEE1F900BE7843 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		CE0A7F071FCE8EDA009C884F /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
