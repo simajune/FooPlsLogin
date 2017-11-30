@@ -14,8 +14,6 @@
 				<true/>
 			</dict>
 		</dict>
-		<key>NSAllowsArbitraryLoadsInWebContent</key>
-		<false/>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
@@ -60,13 +58,13 @@
 	<string>ddb655dcbc9971bb203aa167747c55ea</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+        <string>kakaoddb655dcbc9971bb203aa167747c55ea</string>
+        <string>kakaokompassauth</string>
+        <string>storykompassauth</string>
 		<string>fbapi</string>
 		<string>fb-messenger-api</string>
 		<string>fbauth2</string>
 		<string>fbshareextension</string>
-		<string>kakaoddb655dcbc9971bb203aa167747c55ea</string>
-		<string>kakaokompassauth</string>
-		<string>storykompassauth</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
