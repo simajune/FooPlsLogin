@@ -277,11 +277,20 @@
                         <outlet property="kakaoBtn" destination="1Xy-lr-S0n" id="ZXa-lh-jPu"/>
                         <outlet property="loginBtn" destination="7v8-95-ea7" id="QgK-eI-6Cn"/>
                         <outlet property="pwdTF" destination="jgK-kA-6LK" id="6tq-IX-i89"/>
+                        <segue destination="2LH-jv-hXu" kind="show" identifier="mainSegue" id="80J-S1-MC9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3e-gS-QUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="756" y="892.80359820089961"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="K6a-mQ-Zg7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="2LH-jv-hXu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fM8-OO-sS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="756" y="1369"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="WQp-3A-hCD">
