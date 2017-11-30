@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
         
     }
     
+    //MARK: - request firebase custom token
     private func requestCustomToken(accessToken: String) {
         let url = URL(string: String(format: "%@/verifyToken", Bundle.main.object(forInfoDictionaryKey: "VALIDATION_SERVER_URL") as! String))!
         var urlRequest = URLRequest(url: url)
@@ -38,9 +39,37 @@ class LoginViewController: UIViewController {
         let token = KOSession.shared().accessToken
         let parameter = ["token": token]
         
-//        do {
-//            let jsonParams = try JSONSerialization.data(withJSONObject: parameter, options: []) as! [String: String]
-//        }
+        do {
+            let jsonParams = try JSONSerialization.data(withJSONObject: parameter, options: [])
+            urlRequest.httpBody = jsonParams
+        }catch {
+            print("Error in adding token as a parameter: \(error)")
+        }
+        
+        URLSession.shared.dataTask(with: urlRequest) { (data, urlRequest, error) in
+            guard let data = data, error == nil else {
+                print("Error in request token verify: \(error!)")
+                return
+            }
+            do {
+                let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as! [String: String]
+                let firebaseToken = jsonResponse["firebase_token"]!
+                self.signInToFirebaseWithToken(firebaseToken: firebaseToken)
+            }catch let error {
+                print("Error in parsing token: \(error)")
+            }
+        }.resume()
+    }
+    
+    func signInToFirebaseWithToken(firebaseToken: String) {
+        print(firebaseToken)
+        Auth.auth().signIn(withCustomToken: firebaseToken) { (user, error) in
+            if let authError = error {
+                print("authError",authError)
+            } else {
+                self.performSegue(withIdentifier: "mainSegue", sender: self)
+            }
+        }
     }
 }
 

@@ -9,8 +9,6 @@ class SignUpViewController: UIViewController {
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        confirmBtn.layer.cornerRadius = confirmBtn.frame.size.height / 2
-        signupView.layer.cornerRadius = 10
     }
 
     @IBAction func backBtnAction(_ sender: UIButton) {

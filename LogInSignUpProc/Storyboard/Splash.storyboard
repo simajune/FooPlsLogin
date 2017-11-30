@@ -35,7 +35,7 @@
                     <navigationItem key="navigationItem" id="lv5-de-aD7"/>
                     <connections>
                         <outlet property="fooplsLoadingView" destination="tmZ-TO-aSu" id="GG8-vP-6Xs"/>
-                        <segue destination="Qdf-i5-110" kind="show" identifier="Login" id="4v6-OY-2IO"/>
+                        <segue destination="Qdf-i5-110" kind="show" identifier="loginSegue" id="4v6-OY-2IO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bcd-bI-0Xz" userLabel="First Responder" sceneMemberID="firstResponder"/>
