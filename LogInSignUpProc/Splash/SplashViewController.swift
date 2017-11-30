@@ -16,8 +16,11 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
         //애니메이션 끝나고 넘어가는 방법 찾기
         //수정되길...
-        self.fooplsLoadingView.addLoadingAnimation()
-        
+        //self.fooplsLoadingView.addLoadingAnimation()
+        fooplsLoadingView.addLoadingAnimation { (action) in
+            print("End")
+            self.performSegue(withIdentifier: "Login", sender: self)
+        }
         
         
     }

@@ -16,7 +16,17 @@ class LoginViewController: UIViewController {
         kakaoBtn.layer.cornerRadius  = kakaoBtn.frame.size.height / 2
     }
     
+    @IBAction func kakaoBtnAction(_ sender: UIButton) {
+        
+    }
     
+    @IBAction func facebookBtnAction(_sender: UIButton) {
+        
+    }
+    
+    @IBAction func loginBtnAction(_ sender: UIButton) {
+        
+    }
 }
 
 // MARK: FBSDKLoginButtonDelegate

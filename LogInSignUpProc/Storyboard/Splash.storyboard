@@ -35,17 +35,17 @@
                     <navigationItem key="navigationItem" id="lv5-de-aD7"/>
                     <connections>
                         <outlet property="fooplsLoadingView" destination="tmZ-TO-aSu" id="GG8-vP-6Xs"/>
-                        <segue destination="Qdf-i5-110" kind="show" id="4v6-OY-2IO"/>
+                        <segue destination="Qdf-i5-110" kind="show" identifier="Login" id="4v6-OY-2IO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bcd-bI-0Xz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476" y="169.56521739130437"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Login-->
         <scene sceneID="Xv1-vW-kX8">
             <objects>
-                <viewControllerPlaceholder id="Qdf-i5-110" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Login" storyboardName="Login" id="Qdf-i5-110" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWD-Ad-lwb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1196" y="169"/>
