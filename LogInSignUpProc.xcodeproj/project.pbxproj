@@ -11,6 +11,7 @@
 		2328AB8C1FCE9FFC004B75C0 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2328AB8B1FCE9FFC004B75C0 /* SplashViewController.swift */; };
 		2328AB8E1FCEA0EA004B75C0 /* FOOPLSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2328AB8D1FCEA0EA004B75C0 /* FOOPLSView.swift */; };
 		2328AB901FCEAC6A004B75C0 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2328AB8F1FCEAC69004B75C0 /* KakaoOpenSDK.framework */; };
+		2335CAB61FCF1C9500AF06F0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2335CAB51FCF1C9500AF06F0 /* CustomTextField.swift */; };
 		237379AE1FCEE4F200F5351E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237379AD1FCEE4F200F5351E /* Extension.swift */; };
 		237379B01FCEE53800F5351E /* LoginAndSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237379AF1FCEE53800F5351E /* LoginAndSignUpView.swift */; };
 		78393410F846160C7EC6FD47 /* Pods_LogInSignUpProc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 829B4403FD344F685DF572E2 /* Pods_LogInSignUpProc.framework */; };
@@ -29,6 +30,7 @@
 		2328AB8B1FCE9FFC004B75C0 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		2328AB8D1FCEA0EA004B75C0 /* FOOPLSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FOOPLSView.swift; sourceTree = "<group>"; };
 		2328AB8F1FCEAC69004B75C0 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoOpenSDK.framework; path = Pods/KakaoOpenSDK/KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		2335CAB51FCF1C9500AF06F0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		237379AD1FCEE4F200F5351E /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		237379AF1FCEE53800F5351E /* LoginAndSignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginAndSignUpView.swift; sourceTree = "<group>"; };
 		829B4403FD344F685DF572E2 /* Pods_LogInSignUpProc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogInSignUpProc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				237379AF1FCEE53800F5351E /* LoginAndSignUpView.swift */,
+				2335CAB51FCF1C9500AF06F0 /* CustomTextField.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				CE0A7F061FCE8EDA009C884F /* SignUpViewController.swift in Sources */,
 				CE0A7F041FCE8EDA009C884F /* AppDelegate.swift in Sources */,
 				237379AE1FCEE4F200F5351E /* Extension.swift in Sources */,
+				2335CAB61FCF1C9500AF06F0 /* CustomTextField.swift in Sources */,
 				2328AB8E1FCEA0EA004B75C0 /* FOOPLSView.swift in Sources */,
 				237379B01FCEE53800F5351E /* LoginAndSignUpView.swift in Sources */,
 				2328AB8C1FCE9FFC004B75C0 /* SplashViewController.swift in Sources */,
