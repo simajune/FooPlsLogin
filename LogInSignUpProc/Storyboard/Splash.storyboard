@@ -36,6 +36,7 @@
                     <connections>
                         <outlet property="fooplsLoadingView" destination="tmZ-TO-aSu" id="GG8-vP-6Xs"/>
                         <segue destination="Qdf-i5-110" kind="show" identifier="loginSegue" id="4v6-OY-2IO"/>
+                        <segue destination="IlT-Ur-ZhK" kind="show" identifier="mainSegue" id="rLH-Di-RnX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bcd-bI-0Xz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -49,6 +50,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWD-Ad-lwb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1196" y="169"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="otf-Tg-qfM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="IlT-Ur-ZhK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1qB-0j-RoU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1209" y="307"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gsr-iW-dvw">

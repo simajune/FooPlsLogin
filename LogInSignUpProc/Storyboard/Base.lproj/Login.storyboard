@@ -265,7 +265,7 @@
                         <outlet property="facebookBtn" destination="iWM-G4-iWI" id="5Nh-zV-5as"/>
                         <outlet property="kakaoBtn" destination="1Xy-lr-S0n" id="ZXa-lh-jPu"/>
                         <outlet property="loginBtn" destination="7v8-95-ea7" id="QgK-eI-6Cn"/>
-                        <segue destination="Xmr-sD-hVV" kind="show" identifier="mainSegue" id="4ic-LE-Kxg"/>
+                        <segue destination="2LH-jv-hXu" kind="show" identifier="mainSegue" id="80J-S1-MC9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3e-gS-QUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -273,12 +273,12 @@
             <point key="canvasLocation" x="756" y="892.80359820089961"/>
         </scene>
         <!--Main-->
-        <scene sceneID="7zo-Tq-wTr">
+        <scene sceneID="K6a-mQ-Zg7">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="Xmr-sD-hVV" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rbu-f8-xZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Main" id="2LH-jv-hXu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fM8-OO-sS8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="866" y="1443"/>
+            <point key="canvasLocation" x="756" y="1369"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="WQp-3A-hCD">

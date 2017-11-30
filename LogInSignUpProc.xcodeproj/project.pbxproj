@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231BA7BF1FD0203E00EF2B69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231BA7BE1FD0203E00EF2B69 /* Main.storyboard */; };
 		2328AB891FCE9FB5004B75C0 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2328AB881FCE9FB5004B75C0 /* Splash.storyboard */; };
 		2328AB8C1FCE9FFC004B75C0 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2328AB8B1FCE9FFC004B75C0 /* SplashViewController.swift */; };
 		2328AB8E1FCEA0EA004B75C0 /* FOOPLSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2328AB8D1FCEA0EA004B75C0 /* FOOPLSView.swift */; };
@@ -27,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		15DAC707017257161F47E4EB /* Pods-LogInSignUpProc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogInSignUpProc.release.xcconfig"; path = "Pods/Target Support Files/Pods-LogInSignUpProc/Pods-LogInSignUpProc.release.xcconfig"; sourceTree = "<group>"; };
+		231BA7BD1FD013AD00EF2B69 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		231BA7BE1FD0203E00EF2B69 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2328AB881FCE9FB5004B75C0 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		2328AB8B1FCE9FFC004B75C0 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		2328AB8D1FCEA0EA004B75C0 /* FOOPLSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FOOPLSView.swift; sourceTree = "<group>"; };
@@ -162,9 +165,9 @@
 		CE9D36F11FCE92CA00E3713D /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				CE0A7F071FCE8EDA009C884F /* Login.storyboard */,
 				2328AB881FCE9FB5004B75C0 /* Splash.storyboard */,
-				23B317961FCFF15300C0A078 /* Main.storyboard */,
+				CE0A7F071FCE8EDA009C884F /* Login.storyboard */,
+				231BA7BE1FD0203E00EF2B69 /* Main.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -234,7 +237,7 @@
 				CE0A7F0E1FCE8EDA009C884F /* LaunchScreen.storyboard in Resources */,
 				CE0A7F161FCE90EB009C884F /* GoogleService-Info.plist in Resources */,
 				CE0A7F0B1FCE8EDA009C884F /* Assets.xcassets in Resources */,
-				23B317971FCFF15300C0A078 /* Main.storyboard in Resources */,
+				231BA7BF1FD0203E00EF2B69 /* Main.storyboard in Resources */,
 				2328AB891FCE9FB5004B75C0 /* Splash.storyboard in Resources */,
 				CE0A7F091FCE8EDA009C884F /* Login.storyboard in Resources */,
 			);

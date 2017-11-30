@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 
 class SplashViewController: UIViewController {
 
@@ -15,8 +15,12 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fooplsLoadingView.addLoadingAnimation { [weak self] (action) in
-            print("End")
-            self?.performSegue(withIdentifier: "loginSegue", sender: self)
+            guard let `self` = self else { return }
+            if let _ = Auth.auth().currentUser {
+                self.performSegue(withIdentifier: "mainSegue", sender: self)
+            }else {
+                self.performSegue(withIdentifier: "loginSegue", sender: self)
+            }
         }
         
         
