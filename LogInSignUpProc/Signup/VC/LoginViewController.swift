@@ -27,6 +27,21 @@ class LoginViewController: UIViewController {
     @IBAction func loginBtnAction(_ sender: UIButton) {
         
     }
+    
+    private func requestCustomToken(accessToken: String) {
+        let url = URL(string: String(format: "%@/verifyToken", Bundle.main.object(forInfoDictionaryKey: "VALIDATION_SERVER_URL") as! String))!
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Accept")
+        
+        let token = KOSession.shared().accessToken
+        let parameter = ["token": token]
+        
+//        do {
+//            let jsonParams = try JSONSerialization.data(withJSONObject: parameter, options: []) as! [String: String]
+//        }
+    }
 }
 
 // MARK: FBSDKLoginButtonDelegate
