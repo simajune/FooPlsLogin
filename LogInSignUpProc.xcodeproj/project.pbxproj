@@ -108,6 +108,7 @@
 			children = (
 				CE9D36F11FCE92CA00E3713D /* Storyboard */,
 				CE0A7F221FCE9251009C884F /* Resource */,
+				CE0A7F181FCE91BD009C884F /* LoginSignup */,
 				2328AB8A1FCE9FBB004B75C0 /* Splash */,
 				CE0A7F181FCE91BD009C884F /* Signup */,
 			);
@@ -324,11 +325,11 @@
 				CE9D36F31FCE92ED00E3713D /* LoginViewController.swift in Sources */,
 				CE0A7F061FCE8EDA009C884F /* SignUpViewController.swift in Sources */,
 				CE0A7F041FCE8EDA009C884F /* AppDelegate.swift in Sources */,
-				237379AE1FCEE4F200F5351E /* Extension.swift in Sources */,
 				2335CAB61FCF1C9500AF06F0 /* CustomTextField.swift in Sources */,
 				2328AB8E1FCEA0EA004B75C0 /* FOOPLSView.swift in Sources */,
 				237379B01FCEE53800F5351E /* LoginAndSignUpView.swift in Sources */,
 				2328AB8C1FCE9FFC004B75C0 /* SplashViewController.swift in Sources */,
+				CEF02A251FCED34700C89DF6 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
