@@ -17,6 +17,18 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func kakaoBtnAction(_ sender: UIButton) {
+        KOSession.shared().close()
+        KOSession.shared().open { (error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            if KOSession.shared().isOpen() {
+                print("AccessToken: ", KOSession.shared().accessToken)
+                self.requestCustomToken(accessToken: KOSession.shared().accessToken)
+            } else {
+                print("login failed: \(error!)")
+            }
+        }
         
     }
     
@@ -46,7 +58,7 @@ class LoginViewController: UIViewController {
             print("Error in adding token as a parameter: \(error)")
         }
         
-        URLSession.shared.dataTask(with: urlRequest) { (data, urlRequest, error) in
+        URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             guard let data = data, error == nil else {
                 print("Error in request token verify: \(error!)")
                 return

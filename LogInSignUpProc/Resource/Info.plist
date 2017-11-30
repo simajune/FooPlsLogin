@@ -2,8 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>kakao.co.kr</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<false/>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -39,7 +56,7 @@
 	<string>201308307108748</string>
 	<key>FacebookDisplayName</key>
 	<string>FooPls</string>
-	<key>KAKAO_APP_Key</key>
+	<key>KAKAO_APP_KEY</key>
 	<string>ddb655dcbc9971bb203aa167747c55ea</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
@@ -73,6 +90,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>VALIDATION_SERVER_URL</key>
-	<string></string>
+	<string>http://localhost:8000</string>
 </dict>
 </plist>
