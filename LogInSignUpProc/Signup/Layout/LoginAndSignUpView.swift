@@ -6,7 +6,7 @@ import UIKit
 
 class LoginAndSignUpView: UIView {
     // MARK: View Layer
-    @IBOutlet weak var logInView: UIView?
+//    @IBOutlet weak var logInView: UIView?
     @IBOutlet weak var signUpView: UIView?
     @IBOutlet weak var loginStackView: UIStackView?
     
@@ -24,16 +24,24 @@ class LoginAndSignUpView: UIView {
     
     // MARK: Login + SignUp View Setting
     override func awakeFromNib() {
-      
+        
     }
     
     // MARK: Login + SignUp View Setting
     override func layoutSubviews() {
-        for view in loginStackView!.arrangedSubviews {
-            (view as! UITextField).addUnderLine(height: 1, color: UIColor.black)
-           
+        super.layoutSubviews()
+         // 스택뷰
+        if let loginStackView = loginStackView?.arrangedSubviews{
+            for view in loginStackView {
+                (view as! UITextField).addUnderLine(height: 1, color: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))
+            }
         }
-        
+        // 회원가입뷰
+        if let subViews = signUpView?.subviews{
+            for view in subViews[0 ... 2] {
+               (view as! UITextField).addUnderLine(height: 1, color: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))
+            }
+        }
     }
     
 }

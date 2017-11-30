@@ -1,17 +1,19 @@
 //
 //  SplashViewController.swift
 //  LogInSignUpProc
-//
-//  Created by SIMA on 2017. 11. 29..
-//  Copyright © 2017년 SONGYEE SHIN. All rights reserved.
-//
 
 import UIKit
+import SwiftKeychainWrapper
 import Firebase
 
 class SplashViewController: UIViewController {
-
+    
+    // MARK: property
+    let loginSegue = "loginSegue"
+    
     @IBOutlet weak var fooplsLoadingView: FOOPLSView!
+
+    // MARK: Life Cycle
     override func viewDidLoad() {        
         super.viewDidLoad()
         try! Auth.auth().signOut()
@@ -23,8 +25,5 @@ class SplashViewController: UIViewController {
                 self.performSegue(withIdentifier: "loginSegue", sender: self)
             }
         }
-        
-        
     }
-    
 }

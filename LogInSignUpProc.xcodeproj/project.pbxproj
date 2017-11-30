@@ -22,6 +22,7 @@
 		CE0A7F0B1FCE8EDA009C884F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0A7F0A1FCE8EDA009C884F /* Assets.xcassets */; };
 		CE0A7F0E1FCE8EDA009C884F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0A7F0C1FCE8EDA009C884F /* LaunchScreen.storyboard */; };
 		CE0A7F161FCE90EB009C884F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE0A7F151FCE90EA009C884F /* GoogleService-Info.plist */; };
+		CE1E93F41FCFF2110059775A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E93F31FCFF2110059775A /* Model.swift */; };
 		CE9D36F31FCE92ED00E3713D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D36F21FCE92ED00E3713D /* LoginViewController.swift */; };
 		CEEEFD491FCFB388009CD1D9 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237379AD1FCEE4F200F5351E /* Extension.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		CE0A7F0D1FCE8EDA009C884F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE0A7F0F1FCE8EDA009C884F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0A7F151FCE90EA009C884F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE1E93F31FCFF2110059775A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CE9D36F21FCE92ED00E3713D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 		CE0A7F181FCE91BD009C884F /* Signup */ = {
 			isa = PBXGroup;
 			children = (
+				CE1E93F21FCFF2010059775A /* Model */,
 				CE0A7F211FCE9211009C884F /* VC */,
 				CE0A7F1F1FCE91FE009C884F /* Layout */,
 			);
@@ -160,6 +163,14 @@
 				CE0A7F0F1FCE8EDA009C884F /* Info.plist */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		CE1E93F21FCFF2010059775A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE1E93F31FCFF2110059775A /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CE9D36F11FCE92CA00E3713D /* Storyboard */ = {
@@ -322,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1E93F41FCFF2110059775A /* Model.swift in Sources */,
 				CEEEFD491FCFB388009CD1D9 /* Extension.swift in Sources */,
 				CE9D36F31FCE92ED00E3713D /* LoginViewController.swift in Sources */,
 				CE0A7F061FCE8EDA009C884F /* SignUpViewController.swift in Sources */,
