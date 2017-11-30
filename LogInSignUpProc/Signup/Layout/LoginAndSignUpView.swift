@@ -8,6 +8,7 @@ class LoginAndSignUpView: UIView {
     // MARK: View Layer
     @IBOutlet weak var logInView: UIView?
     @IBOutlet weak var signUpView: UIView?
+    @IBOutlet weak var loginStackView: UIStackView?
     
     // MARK: Button
     @IBOutlet weak var signUpBtn: UIButton?
@@ -28,7 +29,11 @@ class LoginAndSignUpView: UIView {
     
     // MARK: Login + SignUp View Setting
     override func layoutSubviews() {
-       
+        for view in loginStackView!.arrangedSubviews {
+            (view as! UITextField).addUnderLine(height: 1, color: UIColor.black)
+           
+        }
+        
     }
     
 }
