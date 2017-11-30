@@ -2,12 +2,22 @@
 import UIKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
+
+let userAccount = "account"
 
 class LoginViewController: UIViewController {
     
+    // MARK: 프로퍼티
+   
+    
+    // @IBOutlet
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var facebookBtn: UIButton!
     @IBOutlet weak var kakaoBtn: UIButton!
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var pwdTF: UITextField!
+    
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +25,7 @@ class LoginViewController: UIViewController {
         facebookBtn.layer.cornerRadius  = facebookBtn.frame.size.height / 2
         kakaoBtn.layer.cornerRadius  = kakaoBtn.frame.size.height / 2
     }
-    
+    // MARK: IBAction
     @IBAction func kakaoBtnAction(_ sender: UIButton) {
         
     }
@@ -25,7 +35,44 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginBtnAction(_ sender: UIButton) {
-        
+        guard let email = emailTF.text, !email.isEmpty else {
+            UIAlertController.presentAlertController(target: self,
+                                                     title: "이메일을 입력해 주세요.",
+                                                     massage: nil,
+                                                     actionStyle: .default,
+                                                     cancelBtn: false,
+                                                     completion: nil)
+            return
+        }
+        guard let pwd = pwdTF.text, !pwd.isEmpty else {
+            UIAlertController.presentAlertController(target: self,
+                                                     title: "비밀번호를 입력해 주세요.",
+                                                     massage: nil,
+                                                     actionStyle: .default,
+                                                     cancelBtn: false,
+                                                     completion: nil)
+            return
+        }
+        Auth.auth().signIn(withEmail: email, password: pwd) { [weak self] (user, error) in
+            guard let `self` = self else { return }
+            if error == nil, user != nil{
+                let account = Account(email: email, password: pwd)
+                do{
+                    let data = try JSONEncoder().encode(account)
+                    KeychainWrapper.standard.set(data, forKey: userAccount)
+//                    self.performSegue(withIdentifier: self.LoginToMain, sender: nil)
+                }catch (let error){
+                    print("\(error.localizedDescription)")
+                }
+            }else{
+                UIAlertController.presentAlertController(target: self,
+                                                         title: "이메일 또는 비밀번호가\n 잘못되었습니다.",
+                                                         massage: nil,
+                                                         actionStyle: .default,
+                                                         cancelBtn: false,
+                                                         completion: nil)
+            }
+        }
     }
     
     //MARK: - request firebase custom token
@@ -38,7 +85,6 @@ class LoginViewController: UIViewController {
         
         let token = KOSession.shared().accessToken
         let parameter = ["token": token]
-        
         do {
             let jsonParams = try JSONSerialization.data(withJSONObject: parameter, options: [])
             urlRequest.httpBody = jsonParams
@@ -80,9 +126,10 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
             return
         }else{
             let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-            Auth.auth().signIn(with: credential) { (user, error) in
+            Auth.auth().signIn(with: credential) { [weak self] (user, error) in
+                guard let `self` = self else { return }
                 if error == nil, user != nil {
-                    
+//                    self.performSegue(withIdentifier: <#T##String#>, sender: self)
                 }
             }
         }
