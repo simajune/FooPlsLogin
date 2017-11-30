@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pi6-fW-I29">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oof-Qf-0Mx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -195,6 +195,9 @@
                                                 <state key="normal" title="카카오로 이용하기">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="kakaoBtnAction:" destination="Oof-Qf-0Mx" eventType="touchUpInside" id="pvw-MO-Tkw"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFk-PZ-6yd">
                                                 <rect key="frame" x="253" y="287" width="66" height="26"/>
@@ -347,7 +350,7 @@
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xET-Dz-QSg">
-                                                        <rect key="frame" x="27.5" y="23.5" width="20" height="20"/>
+                                                        <rect key="frame" x="9" y="23.5" width="20" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="qRL-Zh-fg1"/>
                                                             <constraint firstAttribute="width" constant="20" id="rf9-Hf-BNp"/>
@@ -376,7 +379,7 @@
                                                     <constraint firstItem="Lgv-r8-G5K" firstAttribute="width" secondItem="JaK-1b-HKm" secondAttribute="width" multiplier="0.85" id="Z1F-DN-rdZ"/>
                                                     <constraint firstItem="9Ud-RB-fXA" firstAttribute="width" secondItem="JaK-1b-HKm" secondAttribute="width" multiplier="0.4" id="bgN-7N-zY5"/>
                                                     <constraint firstItem="Lgv-r8-G5K" firstAttribute="height" secondItem="JaK-1b-HKm" secondAttribute="height" multiplier="0.6" id="dQ9-PI-2fX"/>
-                                                    <constraint firstItem="xET-Dz-QSg" firstAttribute="centerX" secondItem="JaK-1b-HKm" secondAttribute="centerX" multiplier="0.2" id="k93-3W-8iu"/>
+                                                    <constraint firstItem="xET-Dz-QSg" firstAttribute="centerX" secondItem="JaK-1b-HKm" secondAttribute="centerX" multiplier="0.1" id="k93-3W-8iu"/>
                                                     <constraint firstItem="Lgv-r8-G5K" firstAttribute="centerX" secondItem="JaK-1b-HKm" secondAttribute="centerX" id="npu-5T-PZd"/>
                                                     <constraint firstItem="9Ud-RB-fXA" firstAttribute="height" secondItem="JaK-1b-HKm" secondAttribute="height" multiplier="0.1" id="vg7-Kb-kPO"/>
                                                     <constraint firstItem="2Oq-yI-1Fy" firstAttribute="centerX" secondItem="JaK-1b-HKm" secondAttribute="centerX" id="vp0-ky-B4Q"/>
@@ -455,23 +458,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="quB-Tv-JgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-364" y="118"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="QsJ-OL-T4Z">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Pi6-fW-I29" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kXz-cE-JTH">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Oof-Qf-0Mx" kind="relationship" relationship="rootViewController" id="IAl-mY-2e9"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QHe-o3-acU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="20" y="893"/>
         </scene>
     </scenes>
     <resources>

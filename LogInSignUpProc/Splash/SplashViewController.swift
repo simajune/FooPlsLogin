@@ -19,7 +19,7 @@ class SplashViewController: UIViewController {
         //self.fooplsLoadingView.addLoadingAnimation()
         fooplsLoadingView.addLoadingAnimation { (action) in
             print("End")
-            self.performSegue(withIdentifier: "Login", sender: self)
+            self.performSegue(withIdentifier: "loginSegue", sender: self)
         }
         
         
