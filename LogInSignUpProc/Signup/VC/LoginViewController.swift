@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var kakaoBtn: UIButton!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var pwdTF: UITextField!
+    @IBOutlet weak var faceBookBtn: FBSDKLoginButton!
     
     // MARK: Life Cycle
     override func viewDidLoad() {
@@ -24,6 +25,7 @@ class LoginViewController: UIViewController {
         loginBtn.layer.cornerRadius  = loginBtn.frame.size.height / 2
         facebookBtn.layer.cornerRadius  = facebookBtn.frame.size.height / 2
         kakaoBtn.layer.cornerRadius  = kakaoBtn.frame.size.height / 2
+        
     }
     // MARK: IBAction
     @IBAction func kakaoBtnAction(_ sender: UIButton) {
@@ -31,7 +33,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func facebookBtnAction(_sender: UIButton) {
-        
+        faceBookBtn.delegate = self
     }
     
     @IBAction func loginBtnAction(_ sender: UIButton) {
