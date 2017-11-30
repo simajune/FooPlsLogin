@@ -12,8 +12,9 @@ import Firebase
 class SplashViewController: UIViewController {
 
     @IBOutlet weak var fooplsLoadingView: FOOPLSView!
-    override func viewDidLoad() {
+    override func viewDidLoad() {        
         super.viewDidLoad()
+        try! Auth.auth().signOut()
         fooplsLoadingView.addLoadingAnimation { [weak self] (action) in
             guard let `self` = self else { return }
             if let _ = Auth.auth().currentUser {
