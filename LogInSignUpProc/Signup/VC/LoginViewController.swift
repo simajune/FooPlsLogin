@@ -25,16 +25,16 @@ class LoginViewController: UIViewController {
         loginBtn.layer.cornerRadius  = loginBtn.frame.size.height / 2
         facebookBtn.layer.cornerRadius  = facebookBtn.frame.size.height / 2
         kakaoBtn.layer.cornerRadius  = kakaoBtn.frame.size.height / 2
-        
+        faceBookBtn.delegate = self
     }
     // MARK: IBAction
     @IBAction func kakaoBtnAction(_ sender: UIButton) {
         
     }
     
-    @IBAction func facebookBtnAction(_sender: UIButton) {
-        faceBookBtn.delegate = self
-    }
+//    @IBAction func facebookBtnAction(_sender: UIButton) {
+//
+//    }
     
     @IBAction func loginBtnAction(_ sender: UIButton) {
         guard let email = emailTF.text, !email.isEmpty else {
@@ -135,7 +135,7 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
                 }
             }
         }
-        
+ 
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {

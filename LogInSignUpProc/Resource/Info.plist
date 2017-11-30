@@ -18,18 +18,18 @@
 	<string>1.0</string>
 	<key>CFBundleURLTypes</key>
 	<array>
-		<!--<dict>
+		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb132925974055334</string>
 			</array>
-		</dict>-->
-        <dict>
+		</dict>
+        <!--<dict>
             <key>CFBundleURLSchemes</key>
             <array>
                 <string>fb374709879645138</string>
             </array>
-        </dict>
+        </dict>-->
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
@@ -41,14 +41,14 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<!--<key>FacebookAppID</key>
+	<key>FacebookAppID</key>
 	<string>132925974055334</string>
 	<key>FacebookDisplayName</key>
-	<string>FooPls</string>-->
-    <key>FacebookAppID</key>
+	<string>FooPls</string>
+    <!--<key>FacebookAppID</key>
     <string>374709879645138</string>
     <key>FacebookDisplayName</key>
-    <string>LoginSignUpProc</string>
+    <string>LoginSignUpProc</string>-->
 	<key>KAKAO_APP_Key</key>
 	<string>ddb655dcbc9971bb203aa167747c55ea</string>
 	<key>LSApplicationQueriesSchemes</key>

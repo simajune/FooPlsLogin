@@ -190,9 +190,6 @@
                                                 <state key="normal" title="페이스북으로 이용하기">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="facebookBtnActionWith_sender:" destination="Oof-Qf-0Mx" eventType="touchUpInside" id="knA-Uh-5Ml"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xy-lr-S0n">
                                                 <rect key="frame" x="56.5" y="584" width="262.5" height="33"/>
