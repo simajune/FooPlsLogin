@@ -17,9 +17,9 @@ class LoginViewController: UIViewController {
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         faceBookBtn.delegate = self
     }
+    
     // MARK: IBAction
     //MARK: - 카카오 버튼 눌렀을 때
     @IBAction func kakaoBtnAction(_ sender: UIButton) {
@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
         KOSession.shared().open { (error) in
             KOSession.shared().presentingViewController = nil
             if KOSession.shared().isOpen() {
-                self.requestFirebaseJwt(accessToken: KOSession.shared().accessToken)
+                self.requestFirebaseCustomToken(accessToken: KOSession.shared().accessToken)
             } else {
                 print("login failed: \(error!)")
             }
@@ -62,7 +62,7 @@ class LoginViewController: UIViewController {
         Auth.auth().signIn(withEmail: email, password: pwd) { [weak self] (user, error) in
             guard let `self` = self else { return }
             if error == nil, user != nil{
-//                self.performSegue(withIdentifier: self.LoginToMain, sender: nil)
+              
             }else{
                 UIAlertController.presentAlertController(target: self,
                                                          title: "이메일 또는 비밀번호가\n 잘못되었습니다.",
@@ -73,19 +73,18 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    /**
-     Request firebase token from the validation server.
-     */
-    func requestFirebaseJwt(accessToken: String) {
+    
+    //MARK: - 커스텀 토큰을 만들기위해 만든 서버에 POST를 보내서 파이어베이스에 맞는 커스텀 토큰을 가져옴
+    func requestFirebaseCustomToken(accessToken: String) {
+        //VALIDATION SERVER는 로컬 서버
         let url = URL(string: String(format: "%@/verifyToken", Bundle.main.object(forInfoDictionaryKey: "VALIDATION_SERVER_URL") as! String))!
-        print(url)
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.setValue("application/json", forHTTPHeaderField: "Accept")
-        
-        
+        //카카오에서 받아오 토큰을 저장
         let token = KOSession.shared().accessToken!
+        //토큰을 딕셔너리로 만들어서 json 파라미터로 만듬, 그리고 그 파라미터를 RequestBody에 넣음
         let parameters: [String: String] = ["token": token]
         do {
             let jsonParams = try JSONSerialization.data(withJSONObject: parameters, options: [])
@@ -93,13 +92,14 @@ class LoginViewController: UIViewController {
         } catch {
             print("Error in adding token as a parameter: \(error)")
         }
-        
+        //Request를 만들면 Session을 통해 POST를 보냄
         URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             guard let data = data, error == nil else {
                 print("Error in request token verifying: \(error!)")
                 return
             }
             do {
+                //포스트를 통해 받은 데이터를 json으로 만들고 그 json의 파라미터인 "firebase_Token" (이 값은 파이어베이스의 커스텀 토큰값)을 불러와서 커스텀 토큰으로 로그인하는 파이어베이스 인증 메소드를 사용하여 로그인
                 let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as! [String: String]
                 let firebaseToken = jsonResponse["firebase_token"]!
                 self.signInToFirebaseWithToken(firebaseToken: firebaseToken)
@@ -109,18 +109,13 @@ class LoginViewController: UIViewController {
         }.resume()
     }
     
-    /**
-     Sign in to Firebse with the custom token generated from the validation server.
-     
-     Performs segue if signed in successfully.
-     */
+    //MARK: - 파이어베이스 토큰을 통한 로그인
     func signInToFirebaseWithToken(firebaseToken: String) {
-        print(firebaseToken)
         Auth.auth().signIn(withCustomToken: firebaseToken) { (user, error) in
             if let authError = error {
                 print("authError",authError)
             } else {
-                self.performSegue(withIdentifier: "loginSegue", sender: self)
+                self.performSegue(withIdentifier: "mainSegue", sender: self)
             }
         }
     }
@@ -136,7 +131,7 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
             Auth.auth().signIn(with: credential) { [weak self] (user, error) in
                 guard let `self` = self else { return }
                 if error == nil, user != nil {
-                    //                    self.performSegue(withIdentifier: <#T##String#>, sender: self)
+                    self.performSegue(withIdentifier: "mainSegue", sender: self)
                 }
             }
         }
