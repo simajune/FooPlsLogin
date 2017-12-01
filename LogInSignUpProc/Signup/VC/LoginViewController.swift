@@ -11,14 +11,19 @@ class LoginViewController: UIViewController {
     
     // @IBOutlet
     @IBOutlet weak var emailTF: UITextField!
-    @IBOutlet weak var pwdTF: UITextField!
+    @IBOutlet weak var pwdTF: UITextField!{
+        didSet{
+            pwdTF.delegate = self
+        }
+    }
+    
     @IBOutlet weak var faceBookBtn: FBSDKLoginButton!
     
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         faceBookBtn.delegate = self
+        self.hideKeyboardWhenTappedAround()
     }
     // MARK: IBAction
     //MARK: - 카카오 버튼 눌렀을 때
@@ -36,9 +41,6 @@ class LoginViewController: UIViewController {
         }
     }
     
-    //    @IBAction func facebookBtnAction(_sender: UIButton) {
-    //
-    //    }
     
     @IBAction func loginBtnAction(_ sender: UIButton) {
         guard let email = emailTF.text, !email.isEmpty else {
@@ -62,7 +64,7 @@ class LoginViewController: UIViewController {
         Auth.auth().signIn(withEmail: email, password: pwd) { [weak self] (user, error) in
             guard let `self` = self else { return }
             if error == nil, user != nil{
-//                self.performSegue(withIdentifier: self.LoginToMain, sender: nil)
+                //                self.performSegue(withIdentifier: self.LoginToMain, sender: nil)
             }else{
                 UIAlertController.presentAlertController(target: self,
                                                          title: "이메일 또는 비밀번호가\n 잘못되었습니다.",
@@ -106,7 +108,7 @@ class LoginViewController: UIViewController {
             } catch let error {
                 print("Error in parsing token: \(error)")
             }
-        }.resume()
+            }.resume()
     }
     
     /**
@@ -136,7 +138,7 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
             Auth.auth().signIn(with: credential) { [weak self] (user, error) in
                 guard let `self` = self else { return }
                 if error == nil, user != nil {
-                    //                    self.performSegue(withIdentifier: <#T##String#>, sender: self)
+                    self.performSegue(withIdentifier: "mainSegue", sender: self)
                 }
             }
         }
@@ -147,5 +149,14 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
         
     }
     
+}
+
+// MARK: UITextFieldDelegate
+extension LoginViewController : UITextFieldDelegate {
     
+    // MARK: textFieldShouldReturn
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        pwdTF.resignFirstResponder()
+        return true
+    }
 }
