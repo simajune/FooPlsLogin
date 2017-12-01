@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     // @IBOutlet
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var facebookBtn: UIButton!
-    @IBOutlet weak var kakaoBtn: UIButton!
+    @IBOutlet weak var kakaoBtn: KOLoginButton!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var pwdTF: UITextField!
     @IBOutlet weak var faceBookBtn: FBSDKLoginButton!
