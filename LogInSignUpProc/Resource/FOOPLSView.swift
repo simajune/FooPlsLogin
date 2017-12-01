@@ -19,7 +19,6 @@ private class _FOOPLSPassthroughView: UIView {
 @IBDesignable
 class FOOPLSView : UIView, CAAnimationDelegate {
 
-
 	var animationCompletions = Dictionary<CAAnimation, (Bool) -> Void>()
 	var viewsByName: [String : UIView]!
 
@@ -65,7 +64,6 @@ class FOOPLSView : UIView, CAAnimationDelegate {
 	}
 
 	// - MARK: Setup
-
 	func setupHierarchy() {
 		var viewsByName: [String : UIView] = [:]
 		let bundle = Bundle(for:type(of: self))
@@ -178,7 +176,6 @@ class FOOPLSView : UIView, CAAnimationDelegate {
 	}
 
 	// - MARK: loadingAnimation
-
 	func addLoadingAnimation() {
 		addLoadingAnimation(beginTime: 0, fillMode: kCAFillModeBoth, removedOnCompletion: false, completion: nil)
 	}

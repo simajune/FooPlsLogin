@@ -8,7 +8,7 @@ target 'LogInSignUpProc' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Core'
-  pod 'SwiftKeychainWrapper'
+#  pod 'SwiftKeychainWrapper'
   pod 'FBSDKShareKit'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'

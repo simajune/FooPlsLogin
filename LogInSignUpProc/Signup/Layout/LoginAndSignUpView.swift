@@ -36,6 +36,7 @@ class LoginAndSignUpView: UIView {
                 (view as! UITextField).addUnderLine(height: 1, color: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))
             }
         }
+        
         // 회원가입뷰
         if let subViews = signUpView?.subviews{
             for view in subViews[0 ... 2] {
