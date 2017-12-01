@@ -13,8 +13,6 @@ class SignUpViewController: UIViewController {
             rePwdTF.delegate = self
         }
     }
-    @IBOutlet weak var confirmBtn: UIButton!
-    @IBOutlet weak var signupView: UIView!
     
     // MARK: Property
     lazy var reference = Database.database().reference()
@@ -86,7 +84,7 @@ extension SignUpViewController: UITextFieldDelegate {
     
     // MARK: textFieldShouldReturn
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        pwdTF.resignFirstResponder()
+        rePwdTF.resignFirstResponder()
         return true
     }
 }

@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
             pwdTF.delegate = self
         }
     }
-    
+    @IBOutlet weak var kakaoBtn: KOLoginButton!
     @IBOutlet weak var faceBookBtn: FBSDKLoginButton!
     
     // MARK: Life Cycle
