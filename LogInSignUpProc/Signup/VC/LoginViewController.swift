@@ -9,11 +9,7 @@ class LoginViewController: UIViewController {
     
     // MARK: 프로퍼티
     
-    
     // @IBOutlet
-    @IBOutlet weak var loginBtn: UIButton!
-    @IBOutlet weak var facebookBtn: UIButton!
-    @IBOutlet weak var kakaoBtn: UIButton!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var pwdTF: UITextField!
     @IBOutlet weak var faceBookBtn: FBSDKLoginButton!
@@ -21,16 +17,7 @@ class LoginViewController: UIViewController {
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        do {
-//            try Auth.auth().signOut()
-//            KOSession.shared().close()
-//        }catch let error{
-//            print(error)
-//        }
         
-        loginBtn.layer.cornerRadius  = loginBtn.frame.size.height / 2
-        facebookBtn.layer.cornerRadius  = facebookBtn.frame.size.height / 2
-        kakaoBtn.layer.cornerRadius  = kakaoBtn.frame.size.height / 2
         faceBookBtn.delegate = self
     }
     // MARK: IBAction
@@ -38,7 +25,6 @@ class LoginViewController: UIViewController {
     @IBAction func kakaoBtnAction(_ sender: UIButton) {
         //유효 토큰 제거
         KOSession.shared().close()
-        //
         KOSession.shared().presentingViewController = self.navigationController
         KOSession.shared().open { (error) in
             KOSession.shared().presentingViewController = nil

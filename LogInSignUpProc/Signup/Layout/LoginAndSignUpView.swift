@@ -13,7 +13,8 @@ class LoginAndSignUpView: UIView {
     // MARK: Button
     @IBOutlet weak var signUpBtn: UIButton?
     @IBOutlet weak var logInBtn: UIButton?
-    
+    @IBOutlet weak var kakaoBtn: UIButton?
+    @IBOutlet weak var facebookBtn: UIButton?
     // MARK: TextField
     @IBOutlet weak var emailTF: UITextField?
     @IBOutlet weak var passwordTF: UITextField?
@@ -24,6 +25,10 @@ class LoginAndSignUpView: UIView {
     
     // MARK: Login + SignUp View Setting
     override func awakeFromNib() {
+        // MARK: 버튼 라운드
+        logInBtn?.buttonLayer(cornerRadius: 5)
+        signUpBtn?.buttonLayer(cornerRadius: 5)
+        kakaoBtn?.buttonLayer(cornerRadius: 5)
         
     }
     
@@ -36,7 +41,6 @@ class LoginAndSignUpView: UIView {
                 (view as! UITextField).addUnderLine(height: 1, color: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))
             }
         }
-        
         // 회원가입뷰
         if let subViews = signUpView?.subviews{
             for view in subViews[0 ... 2] {

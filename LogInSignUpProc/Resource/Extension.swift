@@ -7,10 +7,8 @@ import UIKit
 extension UIButton {
    
     // MARK: 버튼레이어
-    func buttonLayer(cornerRadius: CGFloat, borderWidth: CGFloat, borderColor: CGColor) {
+    func buttonLayer(cornerRadius: CGFloat) {
         self.layer.cornerRadius = cornerRadius
-        self.layer.borderColor = borderColor
-        self.layer.borderWidth = borderWidth
     }
 }
 // MARK: UITextField
