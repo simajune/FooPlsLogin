@@ -11,13 +11,19 @@ class LoginViewController: UIViewController {
     
     // @IBOutlet
     @IBOutlet weak var emailTF: UITextField!
-    @IBOutlet weak var pwdTF: UITextField!
+    @IBOutlet weak var pwdTF: UITextField!{
+        didSet{
+            pwdTF.delegate = self
+        }
+    }
+    
     @IBOutlet weak var faceBookBtn: FBSDKLoginButton!
     
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         faceBookBtn.delegate = self
+        self.hideKeyboardWhenTappedAround()
     }
     
     // MARK: IBAction
@@ -36,9 +42,6 @@ class LoginViewController: UIViewController {
         }
     }
     
-    //    @IBAction func facebookBtnAction(_sender: UIButton) {
-    //
-    //    }
     
     @IBAction func loginBtnAction(_ sender: UIButton) {
         guard let email = emailTF.text, !email.isEmpty else {
@@ -62,7 +65,7 @@ class LoginViewController: UIViewController {
         Auth.auth().signIn(withEmail: email, password: pwd) { [weak self] (user, error) in
             guard let `self` = self else { return }
             if error == nil, user != nil{
-              
+
             }else{
                 UIAlertController.presentAlertController(target: self,
                                                          title: "이메일 또는 비밀번호가\n 잘못되었습니다.",
@@ -106,7 +109,7 @@ class LoginViewController: UIViewController {
             } catch let error {
                 print("Error in parsing token: \(error)")
             }
-        }.resume()
+            }.resume()
     }
     
     //MARK: - 파이어베이스 토큰을 통한 로그인
@@ -142,5 +145,14 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
         
     }
     
+}
+
+// MARK: UITextFieldDelegate
+extension LoginViewController : UITextFieldDelegate {
     
+    // MARK: textFieldShouldReturn
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        pwdTF.resignFirstResponder()
+        return true
+    }
 }

@@ -3,6 +3,18 @@
 
 import UIKit
 
+extension UIViewController {
+    // MARK: 탭으로 keyboard 내리기
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
 // MARK: UIButton
 extension UIButton {
    
@@ -11,17 +23,7 @@ extension UIButton {
         self.layer.cornerRadius = cornerRadius
     }
 }
-// MARK: UITextField
-extension UITextField {
-    
-    // MARK: 텍스트필드 밑줄
-    func addUnderLine(height:CGFloat, color: UIColor) {
-        let border = CALayer()
-        border.frame = CGRect(x: 0, y: self.frame.height-height, width: self.frame.width, height: height)
-        border.backgroundColor = color.cgColor
-        self.layer.addSublayer(border)
-    }
-}
+
 // MARK: UIView
 extension UIView {
     
