@@ -3,7 +3,6 @@
 //  LogInSignUpProc
 
 import UIKit
-import SwiftKeychainWrapper
 import Firebase
 import FBSDKLoginKit
 

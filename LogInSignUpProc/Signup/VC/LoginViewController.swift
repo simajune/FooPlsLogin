@@ -4,17 +4,12 @@ import FBSDKLoginKit
 import Firebase
 import SwiftKeychainWrapper
 
-let userAccount = "account"
 
 class LoginViewController: UIViewController {
     
     // MARK: 프로퍼티
-   
     
     // @IBOutlet
-    @IBOutlet weak var loginBtn: UIButton!
-    @IBOutlet weak var facebookBtn: UIButton!
-    @IBOutlet weak var kakaoBtn: UIButton!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var pwdTF: UITextField!
     @IBOutlet weak var faceBookBtn: FBSDKLoginButton!
@@ -22,9 +17,6 @@ class LoginViewController: UIViewController {
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginBtn.layer.cornerRadius  = loginBtn.frame.size.height / 2
-        facebookBtn.layer.cornerRadius  = facebookBtn.frame.size.height / 2
-        kakaoBtn.layer.cornerRadius  = kakaoBtn.frame.size.height / 2
         faceBookBtn.delegate = self
     }
     
@@ -33,7 +25,6 @@ class LoginViewController: UIViewController {
     @IBAction func kakaoBtnAction(_ sender: UIButton) {
         //유효 토큰 제거
         KOSession.shared().close()
-        //
         KOSession.shared().presentingViewController = self.navigationController
         KOSession.shared().open { (error) in
             KOSession.shared().presentingViewController = nil
@@ -45,9 +36,9 @@ class LoginViewController: UIViewController {
         }
     }
     
-//    @IBAction func facebookBtnAction(_sender: UIButton) {
-//
-//    }
+    //    @IBAction func facebookBtnAction(_sender: UIButton) {
+    //
+    //    }
     
     @IBAction func loginBtnAction(_ sender: UIButton) {
         guard let email = emailTF.text, !email.isEmpty else {
@@ -71,14 +62,7 @@ class LoginViewController: UIViewController {
         Auth.auth().signIn(withEmail: email, password: pwd) { [weak self] (user, error) in
             guard let `self` = self else { return }
             if error == nil, user != nil{
-                let account = Account(email: email, password: pwd)
-                do{
-                    let data = try JSONEncoder().encode(account)
-                    KeychainWrapper.standard.set(data, forKey: userAccount)
-                    self.performSegue(withIdentifier: "mainSegue", sender: nil)
-                }catch (let error){
-                    print("\(error.localizedDescription)")
-                }
+              
             }else{
                 UIAlertController.presentAlertController(target: self,
                                                          title: "이메일 또는 비밀번호가\n 잘못되었습니다.",
@@ -122,8 +106,7 @@ class LoginViewController: UIViewController {
             } catch let error {
                 print("Error in parsing token: \(error)")
             }
-            
-            }.resume()
+        }.resume()
     }
     
     //MARK: - 파이어베이스 토큰을 통한 로그인
@@ -152,7 +135,7 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
                 }
             }
         }
- 
+        
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
