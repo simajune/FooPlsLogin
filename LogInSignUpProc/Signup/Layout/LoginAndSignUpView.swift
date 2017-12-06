@@ -39,7 +39,6 @@ class LoginAndSignUpView: UIView {
             for view in loginStackView {
                 (view as! UITextField).addUnderLine(height: 1, color: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))
             }
-            
         }
         
         // 회원가입뷰
